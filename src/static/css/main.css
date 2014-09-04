@@ -1,0 +1,33 @@
+.body {
+    background-color: lightblue;
+}
+
+.header {
+    height: 45px;
+    margin-bottom: 15px;
+    background: dimgray;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header__title {
+    float: left;
+    font-size: xx-large;
+}
+
+.header__auth {
+    float: right;
+}
+
+.body-content {
+    clear: both;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 8%;
+    height: 85%;
+}
+
+.footer {
+}

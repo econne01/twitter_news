@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8">
+        <meta name="description" content="Web app to display news related to a Twitter uses popular tweet terms">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Twitter News</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/panel.css') }}" />
+    </head>
+    <body class="body">
+
+        {% block body %}{% endblock %}
+
+        {% block script_includes %}
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="{{ url_for('static', filename='js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        {% endblock %}
+
+        {% block extra_scripts %}{% endblock %}
+    </body>
+</html>
+
+

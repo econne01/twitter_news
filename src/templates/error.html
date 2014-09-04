@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <div class="error">
+            <div class="error__message">
+                {% if error_msg %}
+                    Sorry there was an error with your request:<br/><br/>
+                    {{ error_msg }}
+                {% else %}
+                    Sorry, something has gone wrong. Please try again!
+                {% endif %}
+            </div>
+        </div>
+
+{% endblock %}
+
+

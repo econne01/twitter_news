@@ -1,0 +1,149 @@
+/* General Panel styles */
+.base-panel {
+    background: beige;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 0px 0px 0px 0px;
+    height: 100%;
+}
+
+.base-panel__container {
+    background: white;
+    padding: 0px 0px 10px 0px;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.base-panel__title {
+    border-bottom: 1px solid black;
+    font-size: large;
+    padding-top: 5px;
+    text-align: center;
+}
+
+/* Tweet panel styles */
+.tweet-panel {
+    margin-right: -15px;
+}
+
+.tweet {
+    clear: both;
+    border-top: 1px solid black;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.twitter-user {
+    float: left;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: center;
+}
+.tweet .twitter-user {
+    width: 22%;
+    min-width: 50px;
+}
+
+.twitter-user__handle {
+}
+
+.twitter-user__icon {
+    width: 100%;
+    max-width: 75px;
+    min-width: 20px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.tweet__timestamp {
+    clear: right;
+    font-weight: bold;
+}
+
+.tweet__content {
+    float: right;
+    width: 78%;
+}
+
+/* Term panel styles */
+.term-row {
+    height: 20%;
+}
+
+.term-panel {
+    text-align: center;
+}
+
+.term-panel__container {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.term {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.term--floating {
+    float: left;
+    padding-right: 5px;
+}
+
+.term__label {
+    border-radius: 5px;
+    background: cadetblue;
+    color: white;
+    padding: 3px 5px 3px 5px;
+}
+
+/* News panel styles */
+.news-row {
+    height: 80%;
+}
+
+.news-panel {
+}
+
+.news-item {
+    clear: both;
+    border-top: 1px solid black;
+    padding: 3px 5px 3px 5px;
+}
+
+.news-item__source {
+    float: left;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.news-item__headline {
+    color: dimgray;
+}
+
+.tags-container {
+}
+
+.term--small {
+    font-size: smaller;
+}
+
+.term__label--small {
+    padding: 1px 3px 1px 3px;
+}
+
+/* Style extensions and modifiers */
+.narrow-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.top-item {
+    border-top: none;
+}
+
+.full-height {
+    height: 100%;
+}

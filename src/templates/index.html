@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block body %}
+        <div class="header">
+            <div class="header__title">Twitter News
+            </div>
+
+            {% block login %}
+            <div class="header__auth">
+                <a href="/login">Login here</a>
+            </div>
+            {% endblock %}
+        </div>
+
+        <div class="body-content fluid-container">
+            <div class="col-sm-4 full-height">
+                <!-- Tweets history panel -->
+                <div class="base-panel tweet-panel">
+                    <div class="base-panel__title">Tweet Timeline</div>
+
+                    <div class="base-panel__container">
+
+                        {% for tweet in tweets %}
+                        <div class="tweet">
+                            <div class="twitter-user">
+                                <img class="twitter-user__icon" src="{{ tweet['user']['profile_image_url'] }}" />
+                            </div>
+                            <div class="twitter-user__handle">@{{ tweet['user']['screen_name'] }}</div>
+                            <div class="tweet__timestamp">{{ tweet['created_at'] }}</div>
+                            <div class="tweet__content">{{ tweet['text'] }}</div>
+                        </div>
+                        {% else %}
+                        <div>No data available, please login</div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-8 full-height">
+                <div class="row term-row">
+                    <div class="col-sm-12 full-height">
+                        <!-- Most popular tweeted terms panel -->
+                        <div class="base-panel term-panel">
+                            <div class="base-panel__title">Most Tweeted Terms</div>
+
+                            <div class="base-panel__container term-panel__container">
+                                {% for term in terms %}
+                                <div class="term term--floating"><span class="term__label">{{ term }}</span></div>
+                                {% else %}
+                                <div>No data available, please login</div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row news-row">
+                    <div class="col-sm-12 full-height">
+                        <!-- Related News headlines panel -->
+                        <div class="base-panel news-panel">
+                            <div class="base-panel__title">News for you</div>
+
+                            <div class="base-panel__container">
+                                {% for article_id, news_item in news.iteritems() %}
+                                <div class="news-item top-item">
+                                    <div class="news-item__source">{{ news_item['source'] }}</div>
+                                    <a class="news-item__headline" href="{{ news_item['url'] }}" target="_blank">{{ news_item['headline'] }}</a>
+                                    <div class="tags-container">
+                                        {% for term in news_item['search_terms'] %}
+                                        <div class="term term--floating term--small">
+                                            <span class="term__label term__label--small">{{ term }}</span>
+                                        </div>
+                                        {% else %}
+                                        <div>No data available, please login</div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}
+
+
